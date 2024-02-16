@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <main>
+        <nav>
+            <img id="logo" src="img/logo.svg" alt="logo">
+            <div class="right-side-nav">
+                <select name="lang" id="lang">
+                    <option value="english" selected>English</option>
+                    <option value="hindi">हिन्दी</option>
+                </select>
+                <button id="sign-in-btn">Sign In</button>
+            </div>
+        </nav>
+        <section class="hero">  
+            <div class="text-content">
+                <h1>Unlimited movies, TV shows and more</h1>
+                <h5>Watch anywhere. Cancel anytime.</h5>
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                <form action="#">
+                    <input type="email" name="email" id="email-input" placeholder="Enter Address">
+                    <button id="get-started">Get Started
+                        <img src="img/right-arrow.svg" id="right-arrow" alt="arrow_down_icon">
+                    </i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="border"></div>
+
+    <section class="tv">
+        <div class="tv-left-side">
+            <h1>Enjoy on your TV</h1>
+            <h5>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h5>
+        </div>
+        <div class="tv-right-side">
+            <img id="tv-img" src="img/tv.png" alt="tv">
+            <video id="tv-video" autoplay loop class="tv-video">
+                <source src="img/tv-video.m4v">
+                Your browser does not support the video tag.
+              </video>
+        </div>
+    </section>
+
+    <div class="border"></div>
+
+    <section class="mobile">
+        
+        <div class="mobile-left-side">
+            <img id="girl-img" src="img/mobile.jpg" alt="tv">
+            <div class="mobile-card">
+                <img src="img/boxshot.png" alt="boxshot" id="boxshot">
+                <div class="card-text">
+                    <h5>Stranger Things</h5>
+                    <p>Downloading...</p>
+                </div>
+                <video src="img/done.mp4" loop mute autoplay id="done"></video>
+            </div>
+        </div>
+
+        <div class="mobile-right-side">
+            <h1>Download your shows to watch offline</h1>
+            <h5>Save your favourites easily and always have something to watch.</h5>
+        </div>
+    </section>
+
+    <div class="border"></div>
+        
+    <script src="media.js"></script>
+</body>
+</html>
