@@ -9,6 +9,27 @@
     box-sizing: border-box;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #323232;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
 .border {
     width: 100%;
     height: 1vh;
@@ -25,7 +46,7 @@ main {
 
 
 .hero {
-    height: 90.8vh;
+    height: 625px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -155,7 +176,7 @@ nav {
 
 
 
-.tv {
+.tv, .inpile {
     width: 100%;
     /* height: 80vh; */
     height: 614.4px;
@@ -167,25 +188,26 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* text-align: left; */
+    text-align: left;
 }
 
-.tv-left-side h1 {
+.tv-left-side h1, .inpile-left-side h1 {
     font-family: "Palanquin Dark", sans-serif;
     font-size: 3.25rem;
+    line-height: 68px;
 }
 
-.tv-left-side h5 {
+.tv-left-side h5, .inpile-left-side h5 {
     font-family: "Poppins", sans-serif;
     font-size: 21px;
     font-weight: 400;
 }
 
-.tv-right-side {
+.tv-right-side, .inpile-right-side {
     position: relative;
 }
 
-#tv-img,  #girl-img{
+#tv-img,  #girl-img, #device-pile-in{
     width: 585px;
     position: relative;
     z-index: 1;
@@ -198,6 +220,12 @@ nav {
     width: 426px;
 }
 
+#inpile-video {
+    position: absolute;
+    top: 53px;
+    left: 111px;
+    width: 357px;
+}
 
 
 
@@ -207,8 +235,7 @@ nav {
 
 
 
-
-.mobile {
+.mobile, .children {
     width: 100%;
     /* height: 80vh; */
     height: 614.4px;
@@ -225,14 +252,14 @@ nav {
     text-align: left;
 }
 
-.mobile-right-side h1 {
+.mobile-right-side h1, .children-right-side h1 {
     font-family: "Palanquin Dark", sans-serif;
     font-size: 3rem;
     line-height: 60px;
     margin-bottom: 20px;
 }
 
-.mobile-right-side h5 {
+.mobile-right-side h5, .children-right-side h5 {
     font-family: "Poppins", sans-serif;
     font-size: 21px;
     font-weight: 400;
@@ -294,20 +321,164 @@ nav {
 
 
 
+.faq {
+    width: 100%;
+    /* height: 80vh; */
+    /* height: 614.4px; */
+    background-color: #000000;
+    color: white;
+    padding: 135px 11.5vw 0 11.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#faq-header {
+    font-family: "Palanquin Dark", sans-serif;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-style: normal;
+    font-size: 3.1rem;
+    margin-bottom: 25px;
+}
+
+.faq-card {
+    width: 98%;
+    /* height: 84px; */
+    background-color: #323232;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.faq-card:hover{
+    background-color: #414141;
+    cursor: pointer;
+}
+
+.cross {
+    display: none;
+    transform: scale(1.9);
+}
+
+.plus {
+    transform: scale(1.9);
+}
+
+.last-mail {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ans {
+    width: 98%;
+    /* height: 84px; */
+    background-color: #323232;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: left;
+    animation: slideIn 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.hidden {
+    display: none;
+    max-height: 0;
+}
+
+
+@keyframes slideIn {
+    from {
+      transform: translateY(-10%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
 
 
 
 
 
 
+
+
+footer {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 25px 11.5vw 0 11.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+.que {
+    margin-bottom: 35px;
+}
+
+footer a, footer p {
+    color: #d0cccc;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.li-s {
+    display: flex;
+    flex-direction: row;
+}
+
+.li-s ul {
+    list-style: none;
+}
+
+.li-s li {
+    width: 300px;
+    height: 35px;
+    text-align: left;
+}
+
+
+#lang2 {
+    padding: 6px 36px;
+    background-color: rgba(0, 0, 0, 0.171);
+    font-style: normal;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.netxin {
+    margin-top: 35px;
+    font-size: 14px;
+}
 
 
 @media (max-width: 1280px) {
-    main, .tv, .mobile {
+    main, .tv, .inpile,  .mobile, .children, .faq, footer {
         padding: 25px 1.563rem 0 1.563rem;
+        text-align: center;
     }
     
-    #tv-img, #girl-img {
+    #tv-img, #girl-img, #device-pile-in, #children-img {
         width: 25.688rem;
         position: relative;
         z-index: 1;
@@ -340,12 +511,23 @@ nav {
     
     .mobile-card p {
         font-size: 10px;
-        color: #0071EB;
     }
 
     #done {
         width: 75px;
     }
+
+    #inpile-video {
+        top: 32px;
+        left: 79px;
+        width: 249px;
+    }
+    
+    .li-s li {
+        width: 250px;
+        height: 35px;
+    }
+    
 }
 
 @media (max-width: 960px) {
@@ -357,12 +539,12 @@ nav {
         margin-right: 4px;
     }
 
-    .text-content, .tv h1 {
+    .text-content, .tv h1, .inpile-left-side h1, #faq-header {
         font-size: 2.2rem;
         font-weight: 400;
     }
 
-    .text-content, .tv h5 {
+    .text-content, .tv h5, .inpile-left-side h5, .faq-card-title {
         font-size: 16px;
         font-weight: 400;
     }
@@ -384,26 +566,40 @@ nav {
         margin-right: 0;
     }
 
-    .tv, .mobile {
+    .tv, .mobile, .inpile, .children {
         flex-direction: column;
     }
 
-    .mobile-right-side h1 {
+    .mobile-right-side h1, .children-right-side h1 {
         font-size: 2.1rem;
         font-weight: 400;
         text-align: center;
     }
     
-    .mobile-right-side h5 {
+    .mobile-right-side h5, .children-right-side h5 {
         font-size: 16px;
         text-align: center;
     }
 
-    .mobile-right-side {
+    .mobile-right-side, .children-right-side {
         position: absolute;
-        top: 25px;
+        top: 35px;
     }
 
+    #children-img {
+        top: 60px;
+    }
+
+
+    .li-s {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    
+    .li-s li {
+        width: 100%;
+        height: 50px;
+    }
 
 }
 
@@ -417,7 +613,7 @@ nav {
         width: 90%;
     }
 
-    #tv-img, #girl-img {
+    #tv-img, #girl-img, #device-pile-in, #children-img {
         width: 19.688rem;
         position: relative;
         z-index: 1;
@@ -456,14 +652,14 @@ nav {
         width: 75px;
     }
 
-    .mobile-right-side h1 {
+    .mobile-right-side h1, .children-right-side h1 {
         font-size: 2.1rem;
         font-weight: 400;
         text-align: center;
         line-height: 2.5rem;
     }
     
-    .mobile-right-side h5 {
+    .mobile-right-side h5, .children-right-side h5 {
         font-size: 16px;
         text-align: center;
         padding: 10px;
@@ -475,8 +671,14 @@ nav {
     }
 
 
-    #girl-img {
+    #girl-img, #children-img {
         width: 315px;
-        top: 80px;
+        top: 50px;
+    }
+
+    #inpile-video {
+        top: 28px;
+        left: 63px;
+        width: 12.2rem;
     }
 }
