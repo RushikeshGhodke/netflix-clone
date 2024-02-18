@@ -682,4 +682,8 @@ footer a, footer p {
         left: 63px;
         width: 12.2rem;
     }
+
+    footer {
+        height: 675px;
+    }
 }
